@@ -1,0 +1,64 @@
+{
+  "name": "@atsquad/token-provider",
+  "version": "1.0.0",
+  "description": "A simple library to resolve JWT tokens.",
+  "main": "lib/tokenProvider.js",
+  "private": false,
+  "files": [
+    "lib"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "build:docs": "typedoc",
+    "test": "jest",
+    "lint": "eslint --ext .ts src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cimpress-MCP/AT-TokenProvider.git"
+  },
+  "author": "Alpha Tango Squad",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Cimpress-MCP/AT-TokenProvider/issues"
+  },
+  "homepage": "https://github.com/Cimpress-MCP/AT-TokenProvider#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "jsonwebtoken": "8.5.1"
+  },
+  "peerDependencies": {
+    "aws-sdk": "^2.726.0"
+  },
+  "devDependencies": {
+    "@types/jsonwebtoken": "^8.5.0",
+    "eslint": "7.5.0",
+    "eslint-config-cimpress-atsquad": "2.1.0",
+    "husky": "4.2.5",
+    "lint-staged": "10.2.11",
+    "prettier": "2.0.5",
+    "typedoc": "^0.17.8",
+    "typescript": "3.9.7"
+  },
+  "eslintConfig": {
+    "extends": "cimpress-atsquad"
+  },
+  "prettier": "eslint-config-cimpress-atsquad/prettier",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "prettier --write",
+      "eslint"
+    ],
+    "*.{js,json,yml,yaml,md}": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": ">=10.0.0"
+  }
+}
