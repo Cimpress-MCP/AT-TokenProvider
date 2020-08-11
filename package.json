@@ -1,5 +1,5 @@
 {
-  "name": "@atsquad/token-provider",
+  "name": "@alphatango/token-provider",
   "version": "1.0.0",
   "description": "A simple library to resolve JWT tokens.",
   "main": "lib/tokenProvider.js",

@@ -9,14 +9,14 @@ It uses AWS KMS to decrypt the client secret and then calls the specified token 
 Install the library.
 
 ```bash
-yarn add @atsquad/token-provider
+yarn add @alphatango/token-provider
 ```
 
 ### Token Provider
 
-```javascript
-const axios = require('axios');
-const TokenProvider = require('@atsquad/token-provider');
+```typescript
+import axios from 'axios';
+import TokenProvider from '@alphatango/token-provider';
 
 const configuration = {
   clientId: 'CLIENT_ID',
